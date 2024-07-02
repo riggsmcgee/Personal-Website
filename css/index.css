@@ -22,12 +22,12 @@ main {
 }
 
 .intro h1 {
-    font-size: 6rem;
+    font-size: 10rem;
     margin: 1rem 0;
 }
 
 .intro p {
-    font-size: 2rem;
+    font-size: 4rem;
     margin: 0.5rem 0;
 }
 
@@ -53,7 +53,7 @@ main {
 }
 
 .card h2 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     margin-top: 0;
 }
 
@@ -67,6 +67,7 @@ main {
 
 .btn {
     display: inline-block;
+    font-size: 1.8rem;
     background-color: #d9d9d9;
     color: #333;
     padding: 0.8rem 1.5rem;
@@ -85,15 +86,23 @@ main {
 /* Mobile layout */
 @media screen and (max-width: 819px) {
     .intro h1 {
-        font-size: 3rem;
+        font-size: 7rem;
     }
 
     .intro p {
-        font-size: 1.2rem;
+        font-size: 3rem;
     }
 
     .cards {
         grid-template-columns: 1fr;
+    }
+
+    .card h2 {
+        font-size: 4rem;
+    }
+
+    .btn {
+        font-size: 2.5rem;
     }
 }
 
