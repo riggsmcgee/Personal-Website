@@ -3,37 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
     <title>Riggs Gorman</title>
+    <meta
+      name="description"
+      content="Personal website of Riggs Gorman, showcasing information for friends, family, and potential employers."
+    />
+    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
+    <link rel="stylesheet" href="css/index.css" />
   </head>
-  <body id="landing-page">
-    <nav></nav>
-    <main id="landing-page-main">
-      <div class="intro-container">
+  <body>
+    <main>
+      <section class="intro">
         <h1>Hi! My name is Riggs.</h1>
         <p>I'm excited to share with you a bit about myself.</p>
         <p>Are you...</p>
-      </div>
+      </section>
 
-      <div class="friends-container user-container">
-        <p>A friend or family member?</p>
-        <img src="resources/friendship.gif" />
-        <a href="in-progress.html">Click Here</a>
-      </div>
+      <section class="cards">
+        <div class="card">
+          <h2>A friend or family member?</h2>
+          <div class="image-container">
+            <img
+              src="resources/friendship.png"
+              alt="Friendship illustration"
+              class="static-image"
+            />
+            <img
+              src="resources/friendship.gif"
+              alt="Friendship illustration"
+              class="hover-image"
+            />
+          </div>
+          <a href="in-progress.html" class="btn">All things Riggs</a>
+        </div>
 
-      <div class="employer-container user-container">
-        <p>A potential employer?</p>
-        <img src="resources/agreement.gif" />
-        <a href="in-progress.html">Click Here</a>
-      </div>
+        <div class="card">
+          <h2>A potential employer?</h2>
+          <div class="image-container">
+            <img
+              src="resources/agreement.png"
+              alt="Business agreement illustration"
+              class="static-image"
+            />
+            <img
+              src="resources/agreement.gif"
+              alt="Business agreement illustration"
+              class="hover-image"
+            />
+          </div>
+          <a href="in-progress.html" class="btn">Professional Page</a>
+        </div>
 
-      <div class="contact-container user-container">
-        <p>Trying to contact me?</p>
-        <img src="resources/chat.gif" />
-        <a href="in-progress.html">Click Here</a>
-      </div>
+        <div class="card">
+          <h2>Trying to contact me?</h2>
+          <div class="image-container">
+            <img
+              src="resources/chat.png"
+              alt="Chat illustration"
+              class="static-image"
+            />
+            <img
+              src="resources/chat.gif"
+              alt="Chat illustration"
+              class="hover-image"
+            />
+          </div>
+          <a href="in-progress.html" class="btn">I want to hear from you</a>
+        </div>
+      </section>
     </main>
-    <footer></footer>
   </body>
 </html>

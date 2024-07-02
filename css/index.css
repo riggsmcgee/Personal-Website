@@ -1,0 +1,169 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+.intro {
+    text-align: start;
+    margin-bottom: 4rem;
+}
+
+.intro h1 {
+    font-size: 6rem;
+    margin: 1rem 0;
+}
+
+.intro p {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+.cards {
+    display: grid;
+    gap: 2rem;
+}
+
+.card {
+    border: 3px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    transition: transform 0.3s ease;
+}
+
+
+.btn {
+    display: inline-block;
+    background-color: #d9d9d9;
+    color: #333;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #333;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card:hover .btn {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Mobile layout */
+@media screen and (max-width: 819px) {
+    .intro h1 {
+        font-size: 3rem;
+    }
+
+    .intro p {
+        font-size: 1.2rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* iPad / tablet layout (upside-down triangle) */
+@media screen and (min-width: 820px) and (max-width: 1199px) {
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "card1 card1 card2 card2"
+            ". card3 card3 .";
+    }
+
+    .card:nth-child(1) {
+        grid-area: card1;
+    }
+
+    .card:nth-child(2) {
+        grid-area: card2;
+    }
+
+    .card:nth-child(3) {
+        grid-area: card3;
+    }
+}
+
+/* Large screen layout */
+@media screen and (min-width: 1150px) {
+    .cards {
+        display: flex;
+    }
+}
+
+
+.image-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* Adjust this value to match your image aspect ratio */
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  .static-image,
+  .hover-image {
+    max-width: 100%;
+    max-height: 100%;
+    transition: opacity 0.3s ease;
+  }
+  
+  .hover-image {
+    opacity: 0;
+  }
+  
+  .card:hover .static-image {
+    opacity: 0;
+  }
+  
+  .card:hover .hover-image {
+    opacity: 1;
+  }
+  
+  /* Remove or comment out this rule as it's no longer needed */
+  /* .card:hover img {
+    transform: scale(1.05);
+  } */
