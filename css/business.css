@@ -1,0 +1,112 @@
+/* business.css */
+
+#business-page {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+nav {
+    background-color: #333;
+    padding: 1rem 2rem;
+}
+
+.nav-name {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.intro, .certificates, .projects {
+    margin-bottom: 4rem;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    color: #222;
+}
+
+.certificate-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card:nth-child(odd) {
+    transform: translateX(-2rem);
+}
+
+.project-card:nth-child(even) {
+    transform: translateX(2rem);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.project-card .btn {
+    background-color: #fff;
+    color: #333;
+}
+
+.project-card:hover .btn {
+    background-color: #f0f0f0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card:nth-child(odd),
+    .project-card:nth-child(even) {
+        transform: none;
+    }
+}

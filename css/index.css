@@ -172,7 +172,11 @@ main {
     opacity: 1;
   }
   
-  /* Remove or comment out this rule as it's no longer needed */
-  /* .card:hover img {
-    transform: scale(1.05);
-  } */
+
+
+  /* in-progress page */
+  #in-progress .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
