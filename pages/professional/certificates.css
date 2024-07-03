@@ -18,10 +18,19 @@ main {
     max-width: 50%;
     max-height: auto;
 }
+.card-inner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* justify-content: center; */
+    align-content: center;
+}
+.card-front, .card-back {
+    position: absolute;
+}
 
 .card-back {
-    visibility: collapse;
-    float: left;
+    transform:rotateY(180deg);
 }
 
 img {
